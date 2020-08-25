@@ -5,7 +5,8 @@ const { config } = require('./wdio.shared.conf');
 // Specs
 // ============
 config.specs = [
-    './tests/specs/**/app*.spec.js',
+    // './tests/specs/**/app*.spec.js',
+    './tests/specs/**/app.webview.spec.js',
 ];
 
 // ============
@@ -22,7 +23,7 @@ config.capabilities = [
         // This is `appium:` for all Appium Capabilities which can be found here
         // http://appium.io/docs/en/writing-running-appium/caps/
         'appium:deviceName': 'iPhone 11',
-        'appium:platformVersion': '13.4',
+        'appium:platformVersion': '13.6',
         'appium:orientation': 'PORTRAIT',
         // `automationName` will be mandatory, see
         // https://github.com/appium/appium/releases/tag/v1.13.0

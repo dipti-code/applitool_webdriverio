@@ -12,7 +12,7 @@ exports.config = {
         helpers: [require.resolve('@babel/register')],
     },
     sync: true,
-    logLevel: 'silent',
+    logLevel: 'debug',
     deprecationWarnings: true,
     bail: 0,
     baseUrl: 'http://the-internet.herokuapp.com',
@@ -37,6 +37,22 @@ exports.config = {
                 command: 'appium',
             },
         ],
+        ['applitools', {
+            key: 'bvQiWBPIv11AoizGKdG2jUmD1dKRjYDparfrLe1jakI110', // can be passed here or via environment variable `APPLITOOLS_KEY`
+            serverUrl: 'https://eyesapi.applitools.com', // optional, can be passed here or via environment variable `APPLITOOLS_SERVER_URL`
+            appName: 'Demo  Mobile',
+            // options
+            // proxy: { // optional
+            //     url: 'http://corporateproxy.com:8080'
+            //     username: 'username', // optional
+            //     password: 'secret', // optional
+            //     isHttpOnly: true // optional
+            // },
+            // viewport: { // optional
+            //     width: 1920,
+            //     height: 1080
+            // }
+        }]
     ],
     port: 4723,
 };

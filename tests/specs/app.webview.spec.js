@@ -30,6 +30,7 @@ describe('WebdriverIO and Appium, when interacting with a WebView,', () => {
         const header = $('h1.postHeaderTitle');
         header.waitForDisplayed({ timeout: 3000 });
         expect(header.getText()).toEqual('Webdriver Protocol');
+        browser.takeSnapshot('first');
 
         /**
          * IMPORTANT!!
